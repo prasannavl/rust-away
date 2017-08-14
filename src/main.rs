@@ -1,24 +1,34 @@
-// Setting the cursor on the below two extern
-// statements and using "Go-to-definition" should work. 
+// FIXME: Setting the cursor on the below 'rand' and 'primal'
+// words and using "Go-to-definition" should work. 
 extern crate rand;
 extern crate primal;
 
-// Go-to definitions on the the use-statements
-// should take them to the corresponding source.
+// FIXME: Go-to definitions on the the use-statement
+// modules/types/traits should take them to 
+// the corresponding source.
 use std::io;
 use std::cmp::Ordering;
 use rand::Rng;
+use std::io::Write;
 
 fn main() {
-    println!("Hello, world!");
 
-    // Go-to-definition on HashMap should work
+    // FIXME: The to_string method should be 
+    // available in auto-complete.
+    let msg = "Hello, world!\n".to_string();
+
+    // FIXME: The as_bytes method should be
+    // available in auto-complete.
+    std::io::stdout().write(msg.as_bytes());
+
+    // FIXME: Go-to-definition on HashMap should work
     use std::collections::HashMap;
 
-    // Type of "teams" should be recognized and autocomplete on the variable beyond that point
+    // FIXME: Type of "teams" should be recognized and autocomplete on the variable beyond that point
     // should work accordingly.
     let teams  = vec![String::from("Blue"), String::from("Yellow")];
 
+    // Type of "initial_scores" has to be recognized and autocomplete on the variable beyond that point
     let mut initial_scores: Vec<String> = std::vec::Vec::new();
     initial_scores.push("10".to_string());
 
