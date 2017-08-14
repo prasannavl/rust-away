@@ -1,0 +1,7 @@
+[package]
+authors = ["Prasanna V. Loganathar <pvl@prasannavl.com>"]
+name = "rust-away"
+version = "0.1.0"
+[dependencies]
+primal = "0.2.3"
+rand = "0.3.16"
