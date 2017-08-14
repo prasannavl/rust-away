@@ -1,6 +1,10 @@
+// Setting the cursor on the below two extern
+// statements and using "Go-to-definition" should work. 
 extern crate rand;
 extern crate primal;
 
+// Go-to definitions on the the use-statements
+// should take them to the corresponding source.
 use std::io;
 use std::cmp::Ordering;
 use rand::Rng;
@@ -8,8 +12,13 @@ use rand::Rng;
 fn main() {
     println!("Hello, world!");
 
+    // Go-to-definition on HashMap should work
     use std::collections::HashMap;
+
+    // Type of "teams" should be recognized and autocomplete on the variable beyond that point
+    // should work accordingly.
     let teams  = vec![String::from("Blue"), String::from("Yellow")];
+
     let mut initial_scores: Vec<String> = std::vec::Vec::new();
     initial_scores.push("10".to_string());
 
